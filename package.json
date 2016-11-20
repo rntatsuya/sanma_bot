@@ -1,0 +1,21 @@
+{
+  "name": "sanmabot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sanma"
+  ],
+  "author": "Tatsuya Yokota",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.2",
+    "lodash": "^4.17.2",
+    "node-rest-client": "^2.0.1",
+    "twit": "^2.2.5",
+    "wordfilter": "^0.2.6"
+  }
+}
