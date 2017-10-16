@@ -32,9 +32,21 @@ findAndRetweetSanmaTweets = function() {
 	});
 }
 
+findAndLikeSanmaBotTweets = function() {
+	T.get('search/tweets', {q: '@sanma_bot_yade', result_type: 'recent', lang: 'ja', count: 30}, function(err1, data1, response1) {
+		for (var i = 0; i < data1.statuses.length; i++) {
+			//console.log(data1.statuses);
+			T.post('favorites/create', { id: data1.statuses[i].id_str }, function(err, data, response) {
+				//console.log("liked!");
+			});	
+		}
+	});
+}
+
 setInterval(function() {
   try {
     findAndRetweetSanmaTweets();
+    findAndLikeSanmaBotTweets();
   }
   catch (e) {
     console.log(e);
